@@ -1,0 +1,34 @@
+html {
+    background-color: bisque;
+}
+
+.tidy {
+    border-style: dashed;
+    border-color:chocolate;
+    border-width: 2px;
+}
+
+th {
+    text-align: left;
+    border: 2px;
+    border-style: solid;
+    border-color: coral;
+    padding-left: 2px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: burlywood;
+}
+
+td {
+    text-align: left;
+    border: 2px;
+    border-style: solid;
+    border-color: coral;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+img {
+    float:left;
+    height: 175px;
+}
