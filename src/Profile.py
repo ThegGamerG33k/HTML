@@ -2,28 +2,32 @@ import tornado.web
 
 D = {
     "alice": {
-        "name": ("Alice Smith"),
-        "dob": ("Jan. 1"),
+        "fname": ("Alice"),
+        "lname": ("Smith"),
+        "birthDate": ("1980-01-01"),
         "email": ("alice@example.com"),
-        "image": ("/static/assets/alice.png")
+        "ppic": ("/static/assets/alice.png")
     },
     "bob": {
-        "name": ("Bob Jones"),
-        "dob": ("Dec. 31"),
+        "fname": ("Bob"),
+        "lname": ("Jones"),
+        "birthDate": ("1976-12-31"),
         "email": ("bob@bob.xyz"),
-        "image": ("/static/assets/bob.png")
+        "ppic": ("/static/assets/bob.png")
     },
     "carol": {
-        "name": ("Carol Ling"),
-        "dob": ("Jul. 17"),
+        "fname": ("Carol"),
+        "lname": ("Ling"),
+        "birthDate": ("1989-07-17"),
         "email": ("carol@example.com"),
-        "image": ("/static/assets/carol.png")
+        "ppic": ("/static/assets/carol.png")
     },
     "dave": {
-        "name": ("Dave N. Port"),
-        "dob": ("Mar. 14"),
+        "fname": ("Dave"),
+        "lname": ("Port"),
+        "birthDate": ("1992-03-14"),
         "email": ("dave@dave.dave"),
-        "image": ("/static/assets/dave.png")
+        "ppic": ("/static/assets/dave.png")
     }
 }
 
@@ -32,5 +36,5 @@ class ProfileHandler(tornado.web.RequestHandler):
         p = self.request.path.split("/")
         uname = p[2]
         info = D[uname]
-        self.render("Profile.html", name = info["name"], 
-                    dateOfBirth = info["dob"], email = info["email"], image = info["image"])
+        self.render("Profile.html", name = info["fname"], 
+                    dateOfBirth = info["birthdate"], email = info["email"], image = info["image"])
